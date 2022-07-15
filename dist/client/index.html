@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Three.js TypeScript Tutorials by Sean Bradley : https://sbcode.net/threejs</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0px;
+        }
+        #toolbar {
+			position: absolute;
+        }
+        img:focus {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="module" src="bundle.js"></script>
+    
+    <div id="toolbar">
+        <div style="width: 230px; background-color: white; color: black; padding: 10px;">
+            <button onclick="flyTo();">위치로 이동</button>
+            <p>객체 선택</p>
+            <div id="imgArea">
+                <img src="../models/library/Wood_Tower.jpg" tabindex="0" width="180" style="cursor: pointer;" onclick="select('tower')">
+                x <span id="count-tower">5</span>
+                <img src="../models/library/GroundVehicle.jpg" width="180" tabindex="0" style="cursor: pointer;"
+                    onclick="select('car')"> x <span id="count-car">2</span>
+            </div>
+            <button onclick="add();">추가</button>
+        </div>
+    </div>
+</body>
+
+</html>
