@@ -12,6 +12,16 @@
         }
         #toolbar {
 			position: absolute;
+            margin-top: 30px;
+        }
+        .contents {
+            background-color: white; 
+            color: black;
+            padding: 5px;
+        }
+        .contents > button {
+			display: block;
+            margin: 10px;
         }
         img:focus {
             border: 2px solid red;
@@ -23,16 +33,12 @@
     <script type="module" src="bundle.js"></script>
     
     <div id="toolbar">
-        <div style="width: 230px; background-color: white; color: black; padding: 10px;">
-            <button onclick="flyTo();">위치로 이동</button>
-            <p>객체 선택</p>
-            <div id="imgArea">
-                <img src="../models/library/Wood_Tower.jpg" tabindex="0" width="180" style="cursor: pointer;" onclick="select('tower')">
-                x <span id="count-tower">5</span>
-                <img src="../models/library/GroundVehicle.jpg" width="180" tabindex="0" style="cursor: pointer;"
-                    onclick="select('car')"> x <span id="count-car">2</span>
-            </div>
-            <button onclick="add();">추가</button>
+        <div class="contents">
+            <button value="3">3F</button>
+            <button value="2">2F</button>
+            <button value="1">1F</button>
+            <button value="0">B1</button>
+            <!--<button value="-1">외관</button>-->
         </div>
     </div>
 </body>
